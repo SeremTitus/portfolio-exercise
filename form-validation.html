@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>form validation example</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="row-list">
+            <ul>
+                <a class="" href="/">
+                    <span>home</span>
+                </a>
+            </ul>
+            <ul>
+                <a class="" href="projects.html">
+                    <span>projects</span>
+                </a>
+            </ul>
+            <ul>
+                <a class="" href="findme.html">
+                    <span>Find me</span>
+                </a>
+            </ul>
+            <ul>
+                <a href="blog.html">
+                    <span>blog
+                    </span>
+                </a>
+            </ul>
+            <ul>
+                <a class="active" href="form-validation.html">
+                    <span>form validation
+                    </span>
+                </a>
+            </ul>
+        </nav>
+
+    </header>
+    <form id="myForm" style="text-align: center;">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required><br><br>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea><br><br>
+        <button type="submit">Send your message</button>
+    </form>
+    
+    <script>
+        var form = document.getElementById("myForm");
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+            form.submit();
+        });
+    </script>
+    
+</body>
+
+</html>
